@@ -1,0 +1,15 @@
+C:\Users\Maksym\Лекція 1. GIT\LK1\bin\Debug\net7.0\LK1.exe
+C:\Users\Maksym\Лекція 1. GIT\LK1\bin\Debug\net7.0\LK1.deps.json
+C:\Users\Maksym\Лекція 1. GIT\LK1\bin\Debug\net7.0\LK1.runtimeconfig.json
+C:\Users\Maksym\Лекція 1. GIT\LK1\bin\Debug\net7.0\LK1.dll
+C:\Users\Maksym\Лекція 1. GIT\LK1\bin\Debug\net7.0\LK1.pdb
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.csproj.AssemblyReference.cache
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.AssemblyInfoInputs.cache
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.AssemblyInfo.cs
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.csproj.CoreCompileInputs.cache
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.dll
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\refint\LK1.dll
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.pdb
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\LK1.genruntimeconfig.cache
+C:\Users\Maksym\Лекція 1. GIT\LK1\obj\Debug\net7.0\ref\LK1.dll
