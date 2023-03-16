@@ -7,7 +7,7 @@ namespace L1
     {
         static void Main()
         {
-            int sum = 100 * (1 + 100) / 2;
+            int sum = 100 * (56 + 1200) / 2;
             Console.WriteLine(sum);
         }
     }
