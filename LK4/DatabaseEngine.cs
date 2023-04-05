@@ -1,32 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LK4
+﻿namespace LK4
 {
     public class DatabaseEngine<TKey, TValue>
     {
-        public DatabaseEngine(){}
 
-        public void WriteValue(Dictionary<TKey, TValue> value, TKey tk, TValue tv)
+        private readonly Dictionary<TKey, DatabaseValue> _dictionary;
+        public DatabaseEngine()
         {
-            value.Add(tk, tv);
-            //Console.WriteLine(value[tk]);
+            this._dictionary = new Dictionary<TKey, DatabaseValue>();
         }
-        public void ReadValue(Dictionary<TKey, TValue> value, TKey tk)
+
+        public void WriteValue(TKey tk, TValue tv,  string password)
         {
-            Console.WriteLine(value[tk]);
+            var value = new DatabaseValue( tv, password);
+            _dictionary[tk] = value;
+        }
+        public void ReadValue(TKey tk)
+        {
+            Console.WriteLine("Name - "+_dictionary[tk].Value + " Password - "+ _dictionary[tk].TablePass);
+
         }
 
         public class DatabaseValue
         {
-            private Dictionary<TKey, TValue> _value = new Dictionary<TKey, TValue>();
-            public Dictionary<TKey, TValue> Value => _value;
-            private string[] _tableName = new string[10];
-            public string[] TableName => _tableName;
-            public DatabaseValue(){}
+            private readonly TValue _value;
+            private readonly string _tablePass;
+            public TValue Value => _value;
+            public string TablePass => _tablePass;
+            public DatabaseValue( TValue value, string password)
+            {
+                this._value = value;
+                this._tablePass = password;
+            }
         }
     }
 }

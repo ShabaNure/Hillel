@@ -1,27 +1,17 @@
-﻿using System;
+﻿using LK4;
 
-namespace LK4
+var data = new DatabaseEngine<string, string>();
+
+for (int i = 0; i < 10; i++)
 {
-    internal class Program
-    {
-        static void Main()
-        {
-            var lst = new DatabaseEngine<string, string>.DatabaseValue();
-            var data = new DatabaseEngine<string, string>();
-            string tempName;
-            for(int i = 0; i < 10; i++) 
-            {
-                string name = "Name" + i;
-                string password = PasswordGenerator.Generate();
-                data.WriteValue(lst.Value, name,password);
-                lst.TableName[i] = name;
-                Console.WriteLine(name);
-            }
-            Console.WriteLine("Выберите имя");
-            tempName= Console.ReadLine();
+    string name = "Name" + i;
+    string key = "Key" + i;
 
-            data.ReadValue(tempName);
-            lst.Value[tempName];
-        }
-    }
+    string password = PasswordGenerator.Generate();
+    data.WriteValue(key, name, password);
 }
+
+Console.WriteLine("Выберите ключ 1 - 10");
+var inputKey = Console.ReadLine();
+
+data.ReadValue(inputKey);
