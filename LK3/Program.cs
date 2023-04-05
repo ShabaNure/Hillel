@@ -4,14 +4,16 @@
     {
         static void Main()
         {
-            var mem = new Memory();
-            var hdrive = new HDrive();
-            var cpu = new CPU();
-            var temp = new Computer();
-            using (var pc = new Computer(mem,hdrive,cpu))
+            
+            var ram = new Ram();
+            var hard = new HardDrive();
+            var cpu = new Cpu();
+
+            using (var pc = new Computer())
             {
-                pc.Menu(mem, hdrive, cpu,temp);
-                pc.Disconnect(mem, hdrive, cpu);
+                pc.AddDevice(ram);
+                pc.AddDevice(hard);
+                pc.AddDevice(cpu);
             }
         }
     }

@@ -6,7 +6,7 @@
         void Remove() { }
         void Unplug() { }
         void Connect() { }
-        void Disconnect() { }
+        void Disconnect() { Console.WriteLine("Device"); }
 
     }
 }
