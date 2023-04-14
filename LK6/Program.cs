@@ -11,21 +11,17 @@
         public static void Lot(int  round)
         {
 
-            double number = Math.Pow(2, 6);
-            List<double> list = new List<double>();
-            HashSet<double> lstN = new HashSet<double>();
-            double[,] Top = new double[2, 3];
+            int number = 100;
+            List<int> list = new List<int>();
             for (int i = 0; i < round; i++)
             {
                 Lottery.Emit(list, number);
-                StatOperations.NeverAppeared(list, number, lstN);
             }
-            StatOperations.MostAppeared(list, Top);
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine(Top[0, i] + " - " + Top[1, i]);
-            }
+            var hashList = new HashSet<int>(list);
+            StatOperations.NeverAppeared(number, hashList);
+            StatOperations.MostAppeared(list,hashList);
             Console.WriteLine("-------------");
+
         }
 
     }

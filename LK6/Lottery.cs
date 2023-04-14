@@ -3,12 +3,12 @@
 
     public static class Lottery
     {
-        public static void Emit(List<double> list,double number)
+        public static void Emit(List<int> list,int number)
         {
             Random rnd = new Random();
-            for(int i=0;i<10;i++)
+            for(int i=0;i<5;i++)
             {
-                list.Add(rnd.Next(1,(int)number));
+                list.Add(rnd.Next(1,number));
             }
         }
     }
