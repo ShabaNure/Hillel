@@ -8,22 +8,30 @@
             var rnd = new Random();
             int positive = 0;
             int negative = 0;
-            var lockObj = new object();
-            for(int i =0;i<threads.Length;i++)
+            var lockObj1 = new object();
+            var lockObj2 = new object();
+            for (int i =0;i<threads.Length;i++)
             {
                 threads[i] = new Thread(() => 
                 {
                     for(int j =0;j<100;j++)
                     {
-                        lock(lockObj)
+                        var num = rnd.Next(1, 100);
+                        if (num % 2 == 0)
                         {
-                            var num = rnd.Next(1, 100);
-                            if (num % 2 == 0)
+                            lock (lockObj1)
                             {
                                 positive++;
                             }
-                            else negative++;
                         }
+                        else
+                        {
+                            lock (lockObj2)
+                            {
+                                negative++;
+                            }
+                        }
+                        
                     }
                 });
             }
