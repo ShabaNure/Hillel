@@ -38,12 +38,10 @@
                                 negative++;
                             }
                         }
-
                     }
                 });
-                await tasks[i];
             }
-
+            Task.WaitAll(tasks);
             Console.WriteLine($"Pos - {positive} Neg - {negative}");
         }
     }
