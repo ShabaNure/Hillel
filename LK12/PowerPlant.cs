@@ -3,10 +3,11 @@
     [Serializable]
     public class PowerPlant
     {
-        private readonly string _name;
-        public string Name => _name;
-        private readonly string _location;
-        public string Location => _location;
+        private string _name;
+        public string Name { get { return _name; } set { _name = value; } }
+
+        private string _location;
+        public string Location { get { return _location; } set { _location = value; } }
 
 
         public PowerPlant() 
