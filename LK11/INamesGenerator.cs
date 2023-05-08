@@ -1,7 +1,7 @@
 ﻿namespace LK11
 {
-    internal interface INamesGenerator
+    public interface INamesGenerator
     {
-        void GetNames();
+        string GetNames();
     }
 }

@@ -1,7 +1,14 @@
 ﻿namespace LK11
 {
-    internal interface IRandomMessageBuilder
+    public interface IRandomMessageBuilder
     {
-        void Result();
+        IDateTimeGenerator DateTimeGenerator { get; set; }
+        IGreetingsGenerator GreetingGenerator { get; set; }
+        INamesGenerator NameGenerator { get; set; }
+
+        void AddDateTime();
+        void AddGreeting();
+        void AddName();
+        string Result();
     }
 }

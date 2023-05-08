@@ -1,7 +1,7 @@
 ﻿namespace LK11
 {
-    internal interface IGreetingsGenerator
+    public interface IGreetingsGenerator
     {
-        void GetGreeting();
+        string GetGreeting();
     }
 }

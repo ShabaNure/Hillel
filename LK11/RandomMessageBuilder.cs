@@ -1,32 +1,42 @@
-﻿namespace LK11
-{
-    public class RandomMessageBuilder:IRandomMessageBuilder
-    {
+﻿using Ninject;
 
-        public void AddDateTime() 
+namespace LK11
+{
+    public class RandomMessageBuilder : IRandomMessageBuilder
+    {
+        [Inject]
+        public IGreetingsGenerator GreetingGenerator { get; set; }
+        [Inject]
+        public INamesGenerator NameGenerator { get; set; }
+        [Inject]
+        public IDateTimeGenerator DateTimeGenerator { get; set; }
+        private string result;
+        //public RandomMessageBuilder(IGreetingsGenerator greetingGenerator, INamesGenerator nameGenerator, IDateTimeGenerator dateTimeGenerator)
+        //{
+        //    GreetingGenerator = greetingGenerator;
+        //    NameGenerator = nameGenerator;
+        //    DateTimeGenerator = dateTimeGenerator;
+        //}
+
+        public void AddDateTime()
         {
             var rnd = new Random();
-            var dateTime = new DateTimeGenerator();
-            if(rnd.Next(0, 2) == 0)
-            { dateTime.GetCurrentDateTime(); }
-            else { dateTime.GetRandomDateTіme(); }
+            if (rnd.Next(0, 2) == 0)
+            { result += DateTimeGenerator.GetCurrentDateTime(); }
+            else { result += DateTimeGenerator.GetRandomDateTіme(); }
 
         }
-        public void AddGreeting() 
+        public void AddGreeting()
         {
-            var greeting = new GreetingsGenerator();
-            greeting.GetGreeting();
+            result += GreetingGenerator.GetGreeting();
         }
-        public void AddName() 
+        public void AddName()
         {
-            var name = new NamesGenerator();
-            name.GetNames();
+            result += NameGenerator.GetNames();
         }
-        public void Result() 
+        public string Result()
         {
-            AddGreeting();
-            AddName();
-            AddDateTime();
+            return result;
         }
     }
 }

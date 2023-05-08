@@ -1,8 +1,8 @@
 ﻿namespace LK11
 {
-    internal interface IDateTimeGenerator
+    public interface IDateTimeGenerator
     {
-        void GetCurrentDateTime();
-        void GetRandomDateTіme();
+        string GetCurrentDateTime();
+        string GetRandomDateTіme();
     }
 }

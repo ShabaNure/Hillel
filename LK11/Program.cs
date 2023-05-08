@@ -9,8 +9,11 @@ namespace LK11
             var module = new RandomMessageBuilderModule();
             var kernel = new StandardKernel(module);
             var message = kernel.Get<IRandomMessageBuilder>();
-
-            message.Result();
+            message.AddGreeting();
+            message.AddName();
+            message.AddName();
+            message.AddDateTime();
+            Console.WriteLine(message.Result());
         }
 
     }
