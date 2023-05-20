@@ -1,0 +1,56 @@
+﻿--begin transaction
+--	insert into Students(FirstName,LastName,Group_Id)
+--	values('Lola','Clark',5)
+--	insert into Students(FirstName,LastName,Group_Id)
+--	values('John','Washington',6)
+--	insert into Students(FirstName,LastName,Group_Id)
+--	values('Andreas','Dowlton',5)
+--	insert into Students(FirstName,LastName,Group_Id)
+--	values('John','Zin',4)
+--commit
+
+--begin transaction
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('Lola',4,5)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('John',5,6)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('Andreas',6,5)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('John',4,4)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('Albert',4,5)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('Mike',5,6)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('Jack',6,5)
+--	insert into StudentsWithMarks(FirstName,Mark,Group_Id)
+--	values('Nina',5,4)
+--commit
+
+
+--begin transaction
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(1,3)
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(2,4)
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(3,5)
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(4,3)
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(5,3)
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(6,4)
+--	insert into StudentMarks(Student_Id,Marks)
+--	values(7,3)
+--commit
+
+--begin transaction
+--	insert into Groups(GroupName,Course)
+--	values('First group',3)
+--	insert into Groups(GroupName,Course)
+--	values('Second group',4)
+--	insert into Groups(GroupName,Course)
+--	values('Third group',5)
+--commit
