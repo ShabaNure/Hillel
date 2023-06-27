@@ -1,0 +1,81 @@
+﻿@using LK23.Models;
+@model Person
+
+@{
+    ViewData["Title"] = "Person";
+}
+
+<div class="flex-container">
+    <div class="left">
+        <img class="image" src="~/images/foto.JPG" height="200" />
+        <section class="sec">
+            <h3 class="hInfo">CONTACT INFO<hr /></h3>
+            <h3>Location</h3>
+            <p>@Model.City</p>
+            <h3>Email</h3>
+            <p>@Model.Email</p>
+            <h3>Phone number</h3>
+            <p>@Model.PhoneNumber</p>
+            <h3>Telegram</h3>
+            <p>@Model.Telegram</p>
+            <h3>LinkedIn</h3>
+            <p>@Model.LinkedIn</p>
+        </section>
+        <section class="sec">
+            <h3 class="hInfo">LANGUAGES<hr /></h3>
+            <p>English - B2</p>
+            <p>German - B1</p>
+        </section>
+    </div>
+    <div class="right">
+        <section>
+            <h1>@Model.Name</h1>
+            <h2>@Model.Job</h2>
+            <hr />
+        </section>
+        <section>
+            <h3>PROFESSIONAL SUMMARY</h3>
+            <p>I am looking for a job for a junior .NET developer. I am studying in university and learning .NET developer courses. I have experience with HTML, CSS, SQL.</p>
+            <hr />
+        </section>
+
+        <section>
+            <h3>EDUCATION</h3>
+            <section>
+                <h4>OCT 2020-NOW</h4>
+                <p>Kharkiv's National University of Radioelectronics / Bachelor of Computer engineering</p>
+            </section>
+            <section>
+                <h4>MARCH 2023-NOW</h4>
+                <p>Hillel IT School/.NET Developer</p>
+                <hr />
+            </section>
+        </section>
+        <section>
+            <h3>WORK EXPERIENCE</h3>
+            <section>
+                <h4>Student OCT 2020-NOW</h4>
+                <p>Kharkiv's National University of Radioelectronics / Computer engineering</p>
+                <hr />
+            </section>
+        </section>
+        <section>
+            <h3>REFERENCE</h3>
+            <section>
+                <form name="myForm" onsubmit="return validateForm()">
+                    <div class="min-flex">
+                        <div class="min-left">
+                            <p>Name</p><input type="text" class="input" name="name" />
+                            <p>Email</p><input type="email" class="input" name="email" />
+                        </div>
+                        <div class="min-right">
+                            <p>Phone number</p><input type="number" class="input" name="number" />
+                            <p>Message</p><input type="text" class="input" name="message" />
+                        </div>
+                    </div>
+                </form>
+                <button class="but" onclick="validateForm()">Contact</button>
+            </section>
+        </section>
+    </div>
+</div>
