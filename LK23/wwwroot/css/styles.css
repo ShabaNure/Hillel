@@ -4,11 +4,41 @@
     display: flex;
     flex-wrap: nowrap;
     background-color: DodgerBlue;
-    min-height: 100vh;
+    min-height: 50vh;
     font-family: "Times New Roman", monospace;
 }
+.nav-container {
+    justify-content: space-between;
+    background-color: darkgrey;
+    font-family: "Times New Roman", monospace;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Gilroy';
+    font-style: normal;
+}
 
-
+.navbar-nav {
+list-style: none;
+padding-left: 0;
+margin: 0;
+align-items: center;
+justify-content: space-between;
+}
+.navbar-nav > .nav-item {
+margin: 0 14px;
+font-weight: 100;
+letter-spacing: 1.5px;
+padding: 5px 0;
+font-size: 17px;
+display: inline-block;
+}
+.navbar-nav > .nav-item > .nav-link-item {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
 .image {
     border-radius: 100px;
 }
